@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+/* 
+1. Vị trí
+2. Kích thước width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông, ...)
+ */
+ /* Common */
+.clear {
+    clear: both;
+}
+.text-white {
+    color: #fff !important;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+}
+.col {
+    padding: 0 8px;
+    margin-top: 32px;
+}
+.col-third {
+    width: calc(100%/3);
+}
+.col-half {
+    width: calc(100%/2);
+}
+.col-full {
+    width: 100%;
+}
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+#main {
+    /* height: 3000px; */
+}
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 46px;
+    background-color: #000;
+    z-index: 2;
+    overflow: hidden;
+}
+#nav,
+.subnav {
+    list-style-type: none;
+}
+#nav {
+    display: inline-block;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#nav li:hover a {
+}
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.nav-arrow-down {
+    font-size: 14px;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav li:hover {
+    display: block;
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn ,
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url("https://www.w3schools.com/w3css/img_la.jpg") top center /
+        cover no-repeat;
+    position: relative;
+    /* min-height: 500px;
+    background-color: #222; */
+}
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 48px;
+    /* left: 50%;
+   transform: translateX(-50%); một cách căn giữa*/
+    /* cách 2 căn giữa */
+    width: 100%;
+    /* cách 3 căn giữa */
+    /* left: 0;
+    right: 0; */
+    text-align: center;
+}
+
+#slider .text-heading {
+    /* giá trị font-weight dao động từ 100 đến 700 */
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+#content {
+}
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.7;
+}
+#content .about-text {
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .member-list {
+    margin-top: 48px;
+    /* overflow: hidden; */
+}
+#content .member-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+#content .member-name {
+    font-size: 15px;
+}
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+/* tour-section*/
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    background-color: #000;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.place-list {
+    
+}
+
+.place-item { 
+    width: calc(100% / 3);
+   
+}
+
+.place-item img:hover {
+    opacity: 0.6;
+}
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+.place-body {
+    font-size: 18px;
+    padding: 32px 15px;
+    background-color: #fff;
+}
+.place-hearding {
+    font-size: 18px;
+}
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-buy-btn {
+    padding: 11px 16px;
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+}
+.place-buy-btn:hover {
+    background-color: #ccc;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(81, 81, 81, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.modal.open{
+    display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+.modal-close {
+}
+.ti-close {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    opacity: 0.7;
+}
+.ti-close:hover {
+    opacity: 1;
+    background: #bbb;
+}
+.modal-header {
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon {
+    margin-right: 16px;
+}
+.ti-bag {
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.ti-shopping {
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.ti-user {
+}
+
+#but-tickets {
+    background: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+#but-tickets:hover {
+    opacity: 0.8;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+.modal-footer a {
+    color: blue;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-130px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.lai {
+    margin-top: 0;
+}
+
+.contact-content {
+    margin-top: 16px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 48px;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+
+}
+.contact-form {
+    font-size: 15px;
+}
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+.contact-form .form-submit {
+   background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float:right;
+  cursor: pointer;
+}
+.contact-form .form-submit:hover {
+    background-color: #bbb;
+}
+
+.col.col-full {
+    padding: 0;
+}
+
+.map-section img {
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+}
+#footer .socials-list a:hover, #footer .copyright a:hover {
+    color:rgba(0, 0, 0, 0.4);
+}
+#footer .copyright {
+    margin-top: 15px;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    font-size: 15px;
+     margin-top: 15px;
+    color:rgba(0, 0, 0, 0.6);
+ }
+
+/* p>i{
+    color: #000;
+} */
