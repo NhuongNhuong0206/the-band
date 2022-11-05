@@ -57,7 +57,7 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 2;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #nav,
 .subnav {

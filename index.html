@@ -105,7 +105,7 @@
                     </ul>
                     <!-- place -->
                     <div class="place-list row">
-                        <div class="col-third col">
+                        <div class="member-item col-third col">
                             <img src="./image/img_band.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-hearding"> New Your</h3>
@@ -118,7 +118,7 @@
                                 <a href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="member-item col-third col">
                             <img src="./image/img_band.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-hearding">Paris</h3>
@@ -131,7 +131,7 @@
                                 <a href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="member-item col-third col">
                             <img src="./image/img_band.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-hearding">San Francisco</h3>
@@ -157,8 +157,8 @@
                 <div class="row">
                     <div class="col col-half contact-info">
                         <p><i class="ti-location-pin"></i>Chicago, ti-user</p>
-                        <p><i class="ti-mobile"></i>Phon: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-mobile"></i>Phon:<a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="ti-email"></i>Email:<a href="mailto:mail@mail.com">mail@mail.com</a></p>
                     </div>
                     <div class="col col-half contact-form">
                         <form action="">
@@ -249,11 +249,11 @@
             }
         }
         // Tự động đóng khi chọn mobile menu
-        var menuItems = document.querySelectorAll("#nav li a[href*='#']");
-        for (var i = 0; i < menuItems.length; i++) {
-            var menuItem = menuItems[i];
+        const menuItems = document.querySelectorAll("#nav li a[href*='#']");
+        for (let i = 0; i < menuItems.length; i++) {
+            const menuItem = menuItems[i];
             menuItem.onclick = function (event) {
-                var isParentMenu = this.nextElementSibling && this.menuItem.nextElementSibling.classList.contains('subnav');
+                const isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
                 console.log(isParentMenu);
                 if (isParentMenu) {
                     event.preventDefault();
